@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=bash -c "exec ${HOME}/bin/gdbus_monitor.sh"
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=~/bin/gdbus_monitor.sh

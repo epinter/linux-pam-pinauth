@@ -1,0 +1,10 @@
+--- sudo-i.debiantrixie.orig	2025-01-18 16:21:52.471519795 -0300
++++ sudo-i	2025-01-18 17:57:03.003824770 -0300
+@@ -3,6 +3,7 @@
+ # Set up user limits from /etc/security/limits.conf.
+ session    required   pam_limits.so
+
++@include common-pinpwd
+ @include common-auth
+ @include common-account
+ @include common-session

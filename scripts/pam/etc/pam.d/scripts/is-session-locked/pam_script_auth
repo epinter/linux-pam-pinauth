@@ -1,0 +1,4 @@
+#!/bin/sh
+test -n "$XDG_SESSION_ID" && (loginctl show-session "$XDG_SESSION_ID" | grep '^LockedHint=yes$' > /dev/null) && return 0;
+
+return 1
