@@ -1,6 +1,10 @@
 # PAM configuration for PIN authentication in GDM3 and SUDO
 
-This project uses files from Debian, but the changes can be adapted to work with other distributions.
+Use a PIN or a short password for sudo and gnome-shell lock screen (gdm3)
+while you still use your normal password for login. This project uses files from Debian,
+but the changes can be adapted to work with other distributions.
+
+***Use at your own risk.***
 
 ### Requirements
 
@@ -12,7 +16,9 @@ This project uses files from Debian, but the changes can be adapted to work with
 
 Create the file with you PIN or short password:
 
-`sudo sh -c 'echo -New Password:;echo '${USER}':`openssl passwd -6` > /etc/pinpwd; chmod 640 /etc/pinpwd'`
+```
+sudo sh -c 'echo -New Password:;echo '${USER}':`openssl passwd -6` > /etc/pinpwd; chmod 640 /etc/pinpwd'
+```
 
 After this command the file /etc/pinpwd should have format 'user:password', something like this:
 
